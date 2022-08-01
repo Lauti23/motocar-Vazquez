@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    color: white;
+    padding: 1em 0.5em;
+    text-align: center;
+    
+}
+
+.header__logo {
+    width: 20%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    color:white;
+}
+
+.header__logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.header__nav {
+    width: 80%;
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.header__lista {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.header__lista li a {
+    text-decoration: none;
+    color: white;
+}
+
+#contenedorMotos {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5em auto;
+    text-align: center;
+}
+
+.moto {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.moto:hover {
+    transform: scale(1.1, 1.1);
+}
+.itemImagen {
+    width: 100%;
+}
+
+.itemTitulo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.itemModelo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2em;
+    margin: 0.2em 0;
+}
+
+.itemPrecio {
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 0.3em;
+}
+
+.itemBoton {
+    width: 40%;
+    margin-bottom: 2em;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.itemBoton:hover {
+    cursor: pointer;
+}
+.carrito__titulo {
+    width: 80%;
+    text-align: center;
+    margin: 1em auto;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 0.2em;
+}
+
+.carrito__h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.carritoVacio {
+    font-family: 'Manrope', sans-serif;
+}
+
+.carritoInfo {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase
+}
+
+.infoImg {
+    width: 15%;
+}
+
+.infoTitulo {
+    width: 30%;
+}
+
+.infoModelo {
+    width: 30%;
+}
+
+.infoPrecio {
+    width: 15%;
+}
+
+.carrito__item {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    margin: 0.5em auto;
+    border-radius: 10px;
+}
+
+.itemEnCarrito {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    margin: 0.2em 0;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.itemImg {
+    width: 15%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.itemTitulo {
+    width: 30%;
+}
+
+.itemModelo {
+    width: 30%;
+}
+
+.itemPrecio {
+    width: 15%;
+}
+
+.botonBorrar {
+    width: 3%;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.carrito__final {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+.carritoTotal {
+    width: 20%;
+    text-align: end;
+
+}
+
+.carritoPrecioFinal {
+    width: 20%;
+    text-align: center;
+}
+
+.carrito__pagar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito__boton {
+    margin: auto;
+    width: 40%;
+    margin: 1em 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 800;
+    font-style: italic;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.carrito__boton:hover {
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__derechos, .footer__texto {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1em;
+    margin: 0;
+}
+.footer__redes {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer__redes i {
+    color: white;
+    font-size: 1.5em;
+}
+.footer__redes .insta {
+    transition: all 0.3s;
+}
+.footer__redes .insta:hover {
+    color: #e4405f;
+}
+.footer__redes .face {
+    transition: all 0.3s;
+}
+.footer__redes .face:hover {
+    color: #4267B2;
+}
+.footer__redes .wpp {
+    transition: all 0.3s;
+}
+.footer__redes .wpp:hover {
+    color: #25D366;
+}
