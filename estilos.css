@@ -185,18 +185,26 @@
 
 .itemTitulo {
     width: 30%;
+    margin: 0;
 }
 
 .itemModelo {
     width: 30%;
+    margin: 0;
 }
 
 .itemPrecio {
     width: 15%;
+    margin: 0;
+}
+
+.itemCantidad {
+    width: 7%;
+    margin: 0;
 }
 
 .botonBorrar {
-    width: 3%;
+    width: 2%;
     background-color: red;
     border: 1px solid red;
     border-radius: 5px;
