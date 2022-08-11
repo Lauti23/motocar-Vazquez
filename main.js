@@ -7,10 +7,11 @@ const pagar = document.getElementById('pagarCarrito')
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarData()
         actualizarCarrito()
         pagarCarrito()
-        fetchData()
     }
+    fetchData()
 })
 
 
@@ -18,13 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
 const fetchData = async () => {
     const resp = await fetch('data.json')
     const data = await resp.json()
-    // console.log(data)
-    pintarData(data)
+    return data;
+
+    // pintarData(data)
 }
 
 //Función para mostrar los productos de forma dinámica en el DOM
-const pintarData = (data) => {
-    data.forEach(producto => {
+const pintarData = async () => {
+    const motos = await fetchData()
+    motos.forEach(producto => {
         const div = document.createElement('div')
         div.classList.add('moto')
         div.innerHTML = `
@@ -45,15 +48,15 @@ const pintarData = (data) => {
 }
 
 //Función para agregar elementos al carrito
-const agregarAlCarrito = (motoId) => {
+const agregarAlCarrito = async (motoId) => {
+    const motos = await fetchData()
     const repetido = carrito.some (prod => prod.id === motoId)
     if (repetido) {
         const prod = carrito.map(prod => {
             if (prod.id === motoId) {
                 prod.cantidad++
-
             }
-        } )
+        })
     } else {
         const item = motos.find((moto)=> moto.id === motoId)
         carrito.push(item)
